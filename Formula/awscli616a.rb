@@ -4,14 +4,14 @@ class Awscli616a < Formula
   desc "Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
   # awscli should only be updated every 10 releases on multiples of 10
-  url "https://github.com/aws/aws-cli/archive/1.16.245.tar.gz"
-  sha256 "b68162e27efd3ef2ac7decffdcfc1a9397c1a44b057adc4c869b13643bbc17f6"
+  url "https://github.com/aws/aws-cli/archive/1.16.261.tar.gz"
+  sha256 "d8897f8e51056a412ab093ab24b76004536634c05eebe34996ff99c58f28a61b"
   head "https://github.com/aws/aws-cli.git", :branch => "develop"
 
   bottle do
     root_url "https://public-fs.616a.io/artifacts/homebrew-taps/awscli"
     cellar :any
-    sha256 "489968e78c50042724b1821bc74f4d7dddff05770176e7392b4215f887c4d531" => :mojave
+    sha256 "45881b4722f808bf5e27242e85c0fe459dc3c64c6ecfd880c0aed85dbcc1ad0f" => :catalina
   end
 
   # Some AWS APIs require TLS1.2, which system Python doesn't have before High
