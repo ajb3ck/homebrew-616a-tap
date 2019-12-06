@@ -1,0 +1,21 @@
+name: default
+on: push
+
+jobs:
+  main:
+    runs-on: macOS-10.14
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: |
+          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+          brew --version
+          wget --version
+      - name: 
+          AWSCLIVER=1.16.294
+          echo "AWSVER: $AWSCLIVER"
+          wget https://github.com/aws/aws-cli/archive/$AWSCLIVER.tar.gz
+          rawShaOutput=`shasum -a 256 $AWSCLIVER.tar.gz`
+          sha256="${rawShaOutput%% *}"
+          echo "SHA256: $sha256"
